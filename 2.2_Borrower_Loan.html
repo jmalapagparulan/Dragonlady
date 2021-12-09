@@ -1,0 +1,194 @@
+<!--HTML5 Doctype // Bootstrap use HTML5 doctype-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Title-->
+    <title> Dragonlady Loaning System </title>
+
+    <!--Mobile-first // Use to make web page responsive especially for mobile-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Styles-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="2.2_Borrower_Loan_Styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <!-- Dragonlady Logo // Homepage -->
+                <a href="2.2_Borrower_Home.html"><img class="logo" src="./Assets/Dragonlady_Logo.svg" alt=""></a>
+                
+                <!-- Hamburger // For Minimizing -->
+                <input type="checkbox" class="check" id="toggle">
+                
+                <label class="hamburger" id="hamburger" for="toggle">
+                    <img src="./Assets/Hamburger_Icon.svg" alt="">
+                </label>
+                
+                <!-- Navigation Bar -->
+                <ul class="nav-ul" id="nav-ul">
+                    <li class="nav-link"><a href="2.2_Borrower_Home.html">Home</a></li>
+                    <li class="nav-link"><a href="2.2_Borrower_Account.html">Account</a></li>
+                    <li class="nav-link"><a href="2.2_Borrower_Loan.html" class="active">Loan</a></li>
+                    <li class="nav-link"><a href="2.2_Borrower_Payment.html">Payment</a></li>
+                    <li class="nav-link"><a href="2.2_Borrower_History.html">History</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="about-section" id="about-section">
+        <div class="container about moveUP">
+            <div class="about-item">
+                <div class="about-item-box">
+                    <div class="row">
+                        <div class="form-center">
+                            <form>
+                                <fieldset>
+                                    <h1>Apply for a loan!</h1>
+                                    <h4>Minimum of Php 500.00 and maximum of Php 100,000.00</h4>
+                                    <br>
+                                    <hr>
+                                    <br>
+                                    <div class="labels">
+                                        <label class="labels-1" for="BCode">Borrower Code:</label>
+                                        <br>
+                                        <br>
+                                        <input class="form-control" type="number" id="BCode" name="Borrower Code" placeholder="Input your Borrower code" required>
+                                    </div>
+                                    <br>
+                                    <div class="labels">
+                                        <label class="labels-1" for="LoanDate">Date:</label>
+                                        <br>
+                                        <br>
+                                        <input class="labels-2" type="date" id="LoanDate" name="Date" required>
+                                    </div>
+                                    <br>
+                                    <div class="labels">
+                                        <label class="labels-1" for="Aloan">Amount of Loan:</label>
+                                        <br>
+                                        <br>
+                                        <input class="form-control" type="number" id="Aloan" name="Amount of Loan" placeholder="Input Amount of Loan" required>
+                                    </div>
+                                    <br>
+                                    <div class="labels">
+                                        <label class="labels-1" for="tbpaid">To be Paid:</label>
+                                        <br>
+                                        <br>
+                                        <input class="form-control1" type="number" id="tbpaid" name="To be Paid" readonly disabled>
+                                    </div>
+                                    <br>
+                                    <div class="labels">
+                                        <label class="labels-1" for="due">Duration:</label>
+                                        <br>
+                                        <br>
+                                        <input class="form-control1" type="number" id="due" name="Duration" readonly disabled>
+                                    </div>
+                                    <br>
+                                    <div class="labels">
+                                        <label class="labels-1" for="mtransfer">Mode of Loan Transfer:</label>
+                                        <br>
+                                        <br>
+                                        <select class="form-control" id="mtransfer" name="Mode of Loan Transfer:" required>
+                                            <option value="gcash">Gcash</option>
+                                            <option value="paymaya">Paymaya</option>
+                                            <option value="paypal">Paypal</option>
+                                            <option value="bdo">BDO</option>
+                                            <option value="walkin">Walk-in</option>
+                                        </select>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div class="labels">
+                                        <input class="submit-button" type="submit" value="Apply Loan">
+                                    </div>
+                                    <br>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div>
+                        <table class="table table-responsive">
+                            <h1>List of Loans</h1>
+                            <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Amount of Loan</th>
+                                <th scope="col">To be Paid</th>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td data-label="Date">06/22/2021</td>
+                                <td data-label="Amount of Loan">Php. 100,000.00</td>
+                                <td data-label="To be Paid">Php. 100,500.00</td>
+                                <td data-label="Duration">6 months</td>
+                                <td data-label="Status">Paid</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Date">10/12/2021</td>
+                                <td data-label="Amount of Loan">Php. 100,000.00</td>
+                                <td data-label="To be Paid">Php. 100,500.00</td>
+                                <td data-label="Duration">6 months</td>
+                                <td data-label="Status">Paid</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Date">11/12/2021</td>
+                                <td data-label="Amount of Loan">Php. 100,000.00</td>
+                                <td data-label="To be Paid">Php. 100,500.00</td>
+                                <td data-label="Duration">6 months</td>
+                                <td data-label="Status">Paid</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer-basic">
+        <footer>
+            <!-- Footer Navigation -->
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="2.2.a_Footer_Contact_Us.html">Contact Us</a></li>
+                <li class="list-inline-item"><a href="2.2.a_Footer_FAQs.html">FAQs</a></li>
+                <li class="list-inline-item"><a href="2.2.a_Footer_Sitemap.html">Sitemap</a></li>
+                <li class="list-inline-item"><a href="2.2.a_Footer_Privacy_Policy.html">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="2.2.a_Footer_Terms_and_Conditions.html">Terms and Conditions</a></li>
+                <li class="list-inline-item"><a href="2.2.a_Footer_Support.html">Support</a></li>
+            </ul>
+
+            <!-- Copyright -->
+            <h4 class="copyright">
+                <br>
+                Dragonlady Loaning System is regulated by the Bangko Sentral ng Pilipinas
+                with contact number (+632) 8708-7087
+                and with email address dragonlady@bsp.gov.ph.
+                <br>
+                For concerns, contact us thru our 24x7 hotline (+632) 8631-8000
+                or email us via callcenter@dlls.com.ph.
+                <br>
+                <br>
+                Dragonlady Loaning System © 2020. All Rights Reserved.  
+            </h4>
+        </footer>
+    </div>
+
+</body>
+
+</html>
