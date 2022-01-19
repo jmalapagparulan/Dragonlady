@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Title-->
+    <title> Dragonlady Loaning System </title>
+
+    <!--IP-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Font Style-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="3.1_Admin_Loan_Styles.css">
+</head>
+
+<body>
+    <header>
+        <!-- Navigation Bar Section -->
+        <nav class="navbar">
+            <div class="navbar__container">
+                <!-- Dragonlady Logo // Homepage -->
+                <a href="3.1_Admin_Home.html" id="navbar__logo">DRAGONLADY</a>
+
+                <!-- Mobile Menu // Hamburger -->
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <!-- Navigation Menu Links -->
+                <ul class="navbar__menu">
+                    <li class="navbar__item"><a href="3.1_Admin_Home.html" id="admin-home">Home</a></li>
+                    <li class="navbar__item"><a href="3.1_Admin_Borrower.html" id="admin-borrower">Borrower</a></li>
+                    <li class="navbar__item"><a href="3.1_Admin_Loan.html" class="active" id="admin-loan">Loan</a></li>
+                    <li class="navbar__item"><a href="3.1_Admin_Payment.html" id="admin-payment">Payment</a></li>
+                    <li class="navbar__item"><a href="1_Homepage.html" id="admin-logout">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- First Section -->
+    <div class="first" id="first-section">
+        <div class="first__container">
+            <!--Loan Applications-->
+            <h1 class="first__description">
+                Loan Applications
+            </h1>
+            
+            <table class="table table-responsive">
+                <caption>Needs Approval</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Borrower Code</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Borrower Code">1234</td>
+                        <td data-label="Date">12/10/2021</td>
+                        <td data-label="Action">
+                            <div class="dropdown">
+                                <button class="dropbtn">Action</button>
+                                <div class="dropdown-content">
+                                <a href="#">Accept</a>
+                                <a href="#">Reject</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Borrower Code">5678</td>
+                        <td data-label="Date">12/10/2021</td>
+                        <td data-label="Action">
+                            <div class="dropdown">
+                                <button class="dropbtn">Action</button>
+                                <div class="dropdown-content">
+                                <a href="#">Accept</a>
+                                <a href="#">Reject</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <!--Rejected Loans-->
+            <h1 class="first__description">
+                Rejected Loans
+            </h1>
+
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th scope="col">Borrower Code</th>
+                        <th scope="col">Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Borrower Code">1234</td>
+                        <td data-label="Date">12/10/2021</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <!--Accepted Loans-->
+            <h1 class="first__description">
+                Accepted Loans
+            </h1>
+
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th scope="col">Borrower Code</th>
+                        <th scope="col">Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Borrower Code">5678</td>
+                        <td data-label="Date">12/10/2021</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+        <!--Footer List-->
+        <div class="footer__all">
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="3.1_Footer_Contact_Us.html">Contact Us</a></li>
+                <li class="list-inline-item"><a href="3.1_Footer_FAQs.html">FAQs</a></li>
+                <li class="list-inline-item"><a href="3.1_Footer_Sitemap.html">Sitemap</a></li>
+                <li class="list-inline-item"><a href="3.1_Footer_Privacy_Policy.html">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="3.1_Footer_Terms_and_Conditions.html">Terms and Conditions</a></li>
+                <li class="list-inline-item"><a href="3.1_Footer_Support.html">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__all">
+            <p class="website__rights">
+                Dragonlady Loaning System is regulated by the Bangko Sentral ng Pilipinas
+                with contact number (+632) 8708-7087 and with email address dragonlady@bsp.gov.ph.
+                For concerns, contact us thru our 24x7 hotline (+632) 8631-8000 or email
+                us via callcenter@dlls.com.ph.
+            </p>
+        </div>
+
+        <!--Logo and Rights-->
+        <section class="logo__rights">
+            <div class="logo__rights--wrap">
+                <!--Logo-->
+                <div class="footer__logo">
+                    <a id="footer__logo">DRAGONLADY</a>
+                </div>
+                <!--Rights-->
+                <p class="website__rights1">
+                    Dragonlady Loaning System © 2020. All Rights Reserved.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script src="3.1_Admin_Loan_Javascript.js"></script>
+</body>
+
+</html>
