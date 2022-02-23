@@ -1,0 +1,223 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Title-->
+    <title> Dragonlady Loaning System </title>
+
+    <!--IP-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Font Style-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="{% static 'CSS/4_Register_Styles.css' %}">
+</head>
+
+<body>
+    <header>
+        <!-- Navigation Bar Section -->
+        <nav class="navbar">
+            <div class="navbar__container">
+                <!-- Dragonlady Logo // Homepage -->
+                <a href="1_Homepage.html" id="navbar__logo">DRAGONLADY</a>
+
+                <!-- Mobile Menu // Hamburger -->
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <!-- Navigation Menu Links -->
+                <ul class="navbar__menu">
+                    <li class="navbar__item"><a href="1_Homepage.html" id="home-page">Home</a></li>
+                    <li class="navbar__item"><a href="2_About.html" id="about-page">About</a></li>
+                    <li class="navbar__item"><a href="3_Login.html" id="login-page">Login</a></li>
+                    <li class="navbar__item"><a href="4_Register.html" class="active" id="register-page">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- First Section -->
+    <div class="first" id="first-section">
+        <div class="first__container">
+            <section class="first__sect">
+                <div class="first__item">
+                    <div class="first__item__box">
+                        <div class="first__row">
+                            <div class="form-center">
+                                <form class="first__fieldset" id="form" method="POST" action="/register">
+                                    <!-- Security token -->
+                                    {% csrf_token %}
+                                    <!--Headings and Description-->
+                                    <h1>Create an Account</h1>
+                                    <h4>Create your account and start your first loan!</h4>
+
+                                    <!--First Name-->
+                                    <div class="first__labels">
+                                        <label class="first__labels1" for="firstname">First Name:</label>
+                                        <br>
+                                        <br>
+                                        {{ form.first_name }}
+                                    </div>
+
+                                    <br>
+
+                                    <!--Middle Name-->
+                                    <div class="first__labels">
+                                        <label class="first__labels1" for="middlename">Middle Name:</label>
+                                        <br>
+                                        <br>
+                                        {{ form.middle_name }}                                    
+                                    </div>
+
+                                    <br>
+
+                                    <!--Surname-->
+                                    <div class="first__labels">
+                                        <label class="first__labels1" for="surname">Surname:</label>
+                                        <br>
+                                        <br>
+                                        {{ form.surname }}                                      
+                                    </div>
+
+                                    <br>
+
+                                    <!--Age-->
+                                    <div class="first__labels">
+                                        <label class="first__labels1" for="age">Age:</label>
+                                        <br>
+                                        <br>
+                                        {{ form.age }}                                      
+                                    </div>
+
+                                    <br>
+
+                                    <!--Birthday-->
+                                    <div class="first__labels">
+                                        <label class="first__labels1" for="bday">Birthday:</label>
+                                        <br>
+                                        <br>
+                                        {{ form.birthday }}                                      
+                                    </div>
+
+                                    <br>  
+
+                                    <!--Gender-->
+                                    <div class="first__labels">
+                                        <label class="first__labels1" for="gender">Gender:</label>
+                                        <br>
+                                        <br>
+                                        {{ form.gender }} 
+                                    </div>
+
+                                    <br>
+
+                                    <!--Email-->
+                                    <div class="first__labels">
+                                        <label class="first__labels1" for="email">Email Address:</label>
+                                        <br>
+                                        <br>
+                                        {{ form.email_address }}                                      
+                                    </div>
+
+                                    <br> 
+                                    
+                                    <!--Home Address-->
+                                    <div class="first__labels">
+                                        <label class="first__labels1" for="hadd">Home Address:</label>
+                                        <br>
+                                        <br>
+                                        {{ form.home_address }}                                      
+                                    </div>
+
+                                    <br>
+
+                                    <!--4 Digit Code-->
+                                    <div class="first__labels">
+                                        <label class="first__labels1" for="fcode">4 Digit Code:</label>
+                                        <br>
+                                        <br>
+                                        {{ form.borrower_code }}                                      
+                                        <input class="first__generate-button" type="submit" value="Generate">
+                                    </div>
+
+                                    <br>
+
+                                    <!--Photo of One Valid ID-->
+                                    <div class="first__labels">
+                                        <label class="first__labels1" for="ppayment">Photo of one valid ID:</label>
+                                        <br>
+                                        <br>
+                                        {{ form.valid_id }}                                      
+                                    </div>
+
+                                    <br>
+
+                                    <!--Create Account Button-->
+                                    <div class="first__labels">
+                                        <input class="first__submit-button" type="submit" value="Create Account">
+                                    </div>
+                                    <br>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+        <!--Footer List-->
+        <div class="footer__all">
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="Footer_Contact_Us.html">Contact Us</a></li>
+                <li class="list-inline-item"><a href="Footer_FAQs.html">FAQs</a></li>
+                <li class="list-inline-item"><a href="Footer_Sitemap.html">Sitemap</a></li>
+                <li class="list-inline-item"><a href="Footer_Privacy_Policy.html">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="Footer_Terms_and_Conditions.html">Terms and Conditions</a></li>
+                <li class="list-inline-item"><a href="Footer_Support.html">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__all">
+            <p class="website__rights">
+                Dragonlady Loaning System is regulated by the Bangko Sentral ng Pilipinas
+                with contact number (+632) 8708-7087 and with email address dragonlady@bsp.gov.ph.
+                For concerns, contact us thru our 24x7 hotline (+632) 8631-8000 or email
+                us via callcenter@dlls.com.ph.
+            </p>
+        </div>
+
+        <!--Logo and Rights-->
+        <section class="logo__rights">
+            <div class="logo__rights--wrap">
+                <!--Logo-->
+                <div class="footer__logo">
+                    <a id="footer__logo">DRAGONLADY</a>
+                </div>
+                <!--Rights-->
+                <p class="website__rights1">
+                    Dragonlady Loaning System © 2020. All Rights Reserved.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script src="{% static 'JS/4_Register_Javascript.js' %}"></script>
+</body>
+
+</html>
